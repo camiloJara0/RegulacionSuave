@@ -1,0 +1,308 @@
+@import '@fortawesome/fontawesome-free/css/all.css';
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500&display=swap');
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body{
+  background-color: #faf8f5;
+  color: #000;
+}
+
+.color-card {
+    background: #d8d0c5;
+}
+
+.color-button {
+    background-color: #b18747;
+    color: #131313;
+}
+
+.color-btnText {
+    color: #b18747;
+}
+
+.bg-page {
+    background-color: #131313;
+}
+
+.divider-soft {
+  background-color: var(--color-gray-400);
+  height: 2px;
+  width: 200px;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+@layer base {
+  :root {
+    /* Warm, grounding palette for therapeutic feel */
+    --background: 40 30% 97%;
+    --foreground: 30 15% 20%;
+
+    --card: 40 25% 95%;
+    --card-foreground: 30 15% 20%;
+
+    --popover: 40 30% 97%;
+    --popover-foreground: 30 15% 20%;
+
+    /* Soft sage green - calming, grounding */
+    --primary: 150 20% 45%;
+    --primary-foreground: 40 30% 97%;
+
+    /* Warm cream */
+    --secondary: 35 30% 90%;
+    --secondary-foreground: 30 15% 25%;
+
+    /* Muted earth tones */
+    --muted: 35 20% 92%;
+    --muted-foreground: 30 10% 45%;
+
+    /* Soft terracotta accent */
+    --accent: 20 35% 75%;
+    --accent-foreground: 30 15% 20%;
+
+    --destructive: 0 65% 50%;
+    --destructive-foreground: 40 30% 97%;
+
+    --border: 35 20% 88%;
+    --input: 35 20% 88%;
+    --ring: 150 20% 45%;
+
+    --radius: 0.75rem;
+
+    /* Custom therapeutic tokens */
+    --sage: 150 20% 45%;
+    --sage-light: 150 25% 90%;
+    --sage-dark: 150 20% 35%;
+    --cream: 40 35% 95%;
+    --cream-dark: 35 25% 88%;
+    --earth: 30 15% 20%;
+    --earth-light: 30 10% 45%;
+    --terracotta: 20 35% 70%;
+    --terracotta-light: 20 40% 92%;
+
+    /* Sidebar tokens */
+    --sidebar-background: 40 30% 97%;
+    --sidebar-foreground: 30 15% 20%;
+    --sidebar-primary: 150 20% 45%;
+    --sidebar-primary-foreground: 40 30% 97%;
+    --sidebar-accent: 35 30% 90%;
+    --sidebar-accent-foreground: 30 15% 25%;
+    --sidebar-border: 35 20% 88%;
+    --sidebar-ring: 150 20% 45%;
+  }
+
+  .dark {
+    --background: 30 15% 10%;
+    --foreground: 40 25% 92%;
+
+    --card: 30 15% 12%;
+    --card-foreground: 40 25% 92%;
+
+    --popover: 30 15% 10%;
+    --popover-foreground: 40 25% 92%;
+
+    --primary: 150 25% 55%;
+    --primary-foreground: 30 15% 10%;
+
+    --secondary: 30 15% 18%;
+    --secondary-foreground: 40 25% 92%;
+
+    --muted: 30 15% 18%;
+    --muted-foreground: 40 15% 60%;
+
+    --accent: 20 30% 40%;
+    --accent-foreground: 40 25% 92%;
+
+    --destructive: 0 62% 40%;
+    --destructive-foreground: 40 25% 92%;
+
+    --border: 30 15% 20%;
+    --input: 30 15% 20%;
+    --ring: 150 25% 55%;
+
+    --sidebar-background: 30 15% 10%;
+    --sidebar-foreground: 40 25% 92%;
+    --sidebar-primary: 150 25% 55%;
+    --sidebar-primary-foreground: 30 15% 10%;
+    --sidebar-accent: 30 15% 18%;
+    --sidebar-accent-foreground: 40 25% 92%;
+    --sidebar-border: 30 15% 20%;
+    --sidebar-ring: 150 25% 55%;
+  }
+}
+
+/* @layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cormorant Garamond', serif;
+  }
+}
+
+@layer components {
+  .heading-hero {
+    @apply text-4xl md:text-5xl lg:text-6xl font-light tracking-tight leading-tight;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .heading-section {
+    @apply text-3xl md:text-4xl font-light tracking-tight;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .heading-subsection {
+    @apply text-xl md:text-2xl font-normal;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  .text-body {
+    @apply text-base md:text-lg font-light leading-relaxed;
+  }
+
+  .text-small {
+    @apply text-sm font-light leading-relaxed;
+  }
+
+  .container-section {
+    @apply max-w-4xl mx-auto px-6 md:px-8 py-16 md:py-24;
+  }
+
+  .card-soft {
+    @apply bg-card rounded-2xl p-6 md:p-8 border border-border/50;
+  }
+
+  .divider-soft {
+    @apply w-16 h-px bg-primary/30 mx-auto my-8;
+  }
+
+  .list-therapeutic {
+    @apply space-y-3 text-body;
+  }
+
+  .list-therapeutic li {
+    @apply flex items-start gap-3;
+  }
+
+  .list-therapeutic li::before {
+    content: '·';
+    @apply text-primary text-2xl leading-none mt-1;
+  }
+} */
+
+@layer utilities {
+  .animate-fade-in {
+    animation: fadeIn 1s ease-out forwards;
+  }
+
+  .animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+  }
+
+  .animate-fade-in-slow {
+    animation: fadeIn 1.5s ease-out forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .bg-gradient-soft {
+    background: linear-gradient(
+      180deg,
+      hsl(var(--background)) 0%,
+      hsl(var(--cream)) 50%,
+      hsl(var(--background)) 100%
+    );
+  }
+
+  .bg-sage-soft {
+    background-color: hsl(var(--sage-light));
+  }
+
+  .bg-terracotta-soft {
+    background-color: hsl(var(--terracotta-light));
+  }
+
+  .text-sage {
+    color: hsl(var(--sage));
+  }
+
+  .text-sage-dark {
+    color: hsl(var(--sage-dark));
+  }
+
+  .text-earth {
+    color: hsl(var(--earth));
+  }
+
+  .text-earth-light {
+    color: hsl(var(--earth-light));
+  }
+
+  .border-sage {
+    border-color: hsl(var(--sage) / 0.3);
+  }
+}
