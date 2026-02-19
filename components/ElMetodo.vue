@@ -46,12 +46,8 @@ const ejes = [
     <!-- ENCABEZADO -->
     <div class="text-center space-y-6">
       <h2 class="text-4xl font-light text-[#8c6b3f] dark:text-[#c5a47e]">
-        El método
+        El método <span class="italic font-semibold ">SER</span>
       </h2>
-
-      <p class="text-lg text-gray-600 dark:text-gray-400">
-        Regulación Somática Suave
-      </p>
 
       <div
         class="max-w-xl mx-auto rounded-2xl px-6 py-6
@@ -66,6 +62,74 @@ const ejes = [
       </div>
     </div>
 
+  <!-- MÉTODO SER -->
+<div class="grid md:grid-cols-3 gap-10">
+
+  <!-- S -->
+  <div
+    class="rounded-3xl p-8 space-y-5
+           bg-[#f5f3ef] dark:bg-[#1a1a1a]/70
+           border border-black/5 dark:border-white/5"
+  >
+    <div class="text-center space-y-3">
+      <span class="text-5xl font-serif text-[#8c6b3f] dark:text-[#c5a47e]">
+        S
+      </span>
+      <h4 class="text-lg font-medium text-gray-700 dark:text-gray-300">
+        Sentir Seguro
+      </h4>
+    </div>
+
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+      El cuerpo aprende que ya no está en peligro.
+      Regulamos el sistema nervioso antes de entrar en procesos profundos.
+    </p>
+  </div>
+
+  <!-- E -->
+  <div
+    class="rounded-3xl p-8 space-y-5
+           bg-[#f5f3ef] dark:bg-[#1a1a1a]/70
+           border border-black/5 dark:border-white/5"
+  >
+    <div class="text-center space-y-3">
+      <span class="text-5xl font-serif text-[#8c6b3f] dark:text-[#c5a47e]">
+        E
+      </span>
+      <h4 class="text-lg font-medium text-gray-700 dark:text-gray-300">
+        Expandir Conciencia
+      </h4>
+    </div>
+
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+      Comprendemos el origen emocional sin revictimización.
+      Integramos mente, cuerpo y memoria emocional.
+    </p>
+  </div>
+
+  <!-- R -->
+  <div
+    class="rounded-3xl p-8 space-y-5
+           bg-[#f5f3ef] dark:bg-[#1a1a1a]/70
+           border border-black/5 dark:border-white/5"
+  >
+    <div class="text-center space-y-3">
+      <span class="text-5xl font-serif text-[#8c6b3f] dark:text-[#c5a47e]">
+        R
+      </span>
+      <h4 class="text-lg font-medium text-gray-700 dark:text-gray-300">
+        Reprogramar desde Regulación
+      </h4>
+    </div>
+
+    <p class="text-gray-600 dark:text-gray-400 leading-relaxed">
+      El cambio ocurre sin forzar.
+      La transformación nace desde una seguridad interna real.
+    </p>
+  </div>
+
+</div>
+
     <!-- INTRO -->
     <div class="text-center space-y-3">
       <h3 class="text-lg font-light text-gray-700 dark:text-gray-300">
@@ -75,6 +139,8 @@ const ejes = [
         El trabajo se sostiene en tres ejes principales:
       </p>
     </div>
+
+
 
     <!-- EJES -->
     <div class="grid gap-10 md:grid-cols-3">

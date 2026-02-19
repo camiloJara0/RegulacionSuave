@@ -10,31 +10,44 @@
   <div
     class="absolute inset-0 opacity-[0.03] pointer-events-none"
     style="background-image: url('/arena.jpg');"
-  ></div>
+  >
+  </div>
 
   <!-- Contenido -->
   <div class="relative z-10 max-w-3xl mx-auto text-center space-y-6 animate-fade-in">
     
-    <h1 class="font-serif text-4xl md:text-6xl text-[#c5a47e] leading-tight">
-      Acompañamiento para
+    <h1 class="font-serif text-3xl md:text-4xl text-[#c5a47e] leading-tight">
+      No estás rota.
       <br />
-      <span class="italic font-light">Ansiedad y Vértigo</span>
+      <span class="italic font-light">
+        Tu sistema nervioso solo aprendió a sobrevivir.
+      </span>
     </h1>
     
     <div class="h-[1px] w-40 bg-[#c5a47e]/30 mx-auto my-6"></div>
 
-    <p class="text-lg md:text-xl text-gray-400 max-w-xl mx-auto font-light leading-relaxed">
-      Un espacio suave y seguro para regular el sistema nervioso,
-      recuperar equilibrio y confianza en el cuerpo, sin forzar procesos.
+    <p class="text-lg md:text-lg text-gray-400 max-w-xl mx-auto font-light leading-relaxed">
+      Acompaño a mujeres a regular ansiedad y vértigo
+      integrando cuerpo y sistema nervioso desde un enfoque suave y seguro.
     </p>
 
-    <div class="flex flex-wrap justify-center gap-3 pt-4">
-      <span class="badge">Sesiones individuales</span>
-      <span class="badge">Ritmo lento</span>
-      <span class="badge">Enfoque suave</span>
+    <div class="flex flex-wrap justify-center gap-3 pt-4 text-xs text-gray-400">
+      <span class="badge">Vives en alerta constante</span>
+      <span class="badge">Tu cuerpo reacciona aunque tu mente entienda</span>
+      <span class="badge">Te cuesta relajarte sin culpa</span>
     </div>
 
-    <div class="pt-10">
+    <div class="pt-10 flex justify-center gap-3">
+      <a
+        href="#metodo"
+        class="inline-flex items-center gap-2 px-10 py-4
+               border-2 border-[#b38b59] hover:bg-[#967347]
+               text-white rounded-3xl text-sm font-semibold
+               uppercase tracking-widest transition-all duration-500
+               hover:shadow-[0_0_20px_rgba(179,139,89,0.3)]"
+      >
+        Conoce método SER
+      </a>
       <a
         href="#contacto"
         class="inline-flex items-center gap-2 px-10 py-4
@@ -43,7 +56,7 @@
                uppercase tracking-widest transition-all duration-500
                hover:shadow-[0_0_20px_rgba(179,139,89,0.3)]"
       >
-        Agendar sesión
+        Agenda tu sesión
       </a>
     </div>
   </div>

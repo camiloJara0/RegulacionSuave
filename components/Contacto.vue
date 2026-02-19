@@ -8,7 +8,7 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
 <template>
   <section
-    class="relative pb-28 px-6 rounded-b-xl
+    class="relative pb-28 px-6 rounded-b-[60px] z-20
            bg-gradient-to-b from-[#0b0b0b] to-[#141414]"
   >
     <div class="max-w-2xl mx-auto text-center space-y-14">
@@ -56,9 +56,22 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
       </div>
 
       <!-- NOTA FINAL -->
-      <p class="text-sm italic text-gray-400">
-        Sin presión. Sin compromiso. A tu ritmo.
-      </p>
+<div class="mt-20 text-center max-w-2xl mx-auto">
+  <p class="text-sm leading-relaxed text-white/40 font-light">
+    Tu sensibilidad no es debilidad.
+    Es profundidad sin regulación todavía.
+  </p>
+
+  <p class="mt-4 text-sm leading-relaxed text-white/30 font-light">
+    Cuando el sistema nervioso aprende seguridad,
+    la vida cambia sin forzarse.
+  </p>
+
+  <p class="mt-4 text-sm leading-relaxed text-white/25 font-light">
+    Sanar no es volverte otra persona.
+    Es volver a ti sin miedo.
+  </p>
+</div>
 
     </div>
   </section>
