@@ -23,6 +23,7 @@ import AvisoLegal from '~/components/AvisoLegal.vue';
         <Horarios />
         <SobreMi />
         <Valores />
+        <Reseñas />
         <Contacto />
       </main>
       <AvisoLegal />

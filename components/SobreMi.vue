@@ -1,7 +1,7 @@
 <template>
 <section
   id="sobre-mi"
-  class="py-24 px-6 bg-[#faf8f5] dark:bg-[#121212] transition-colors"
+  class="py-24 px-6 bg-[#faf8f5] transition-colors"
 >
   <div class="max-w-5xl mx-auto">
 

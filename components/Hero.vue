@@ -19,7 +19,7 @@
     <h1 class="font-serif text-3xl md:text-4xl text-[#c5a47e] leading-tight">
       No estás rota.
       <br />
-      <span class="italic font-light">
+      <span class="italic font-light text-2xl md:text-3xl">
         Tu sistema nervioso solo aprendió a sobrevivir.
       </span>
     </h1>
@@ -40,7 +40,7 @@
     <div class="pt-10 flex justify-center gap-3">
       <a
         href="#metodo"
-        class="inline-flex items-center gap-2 px-10 py-4
+        class="inline-flex items-center gap-2 px-3 md:px-10 py-2 md:py-4
                border-2 border-[#b38b59] hover:bg-[#967347]
                text-white rounded-3xl text-sm font-semibold
                uppercase tracking-widest transition-all duration-500
@@ -50,7 +50,7 @@
       </a>
       <a
         href="#contacto"
-        class="inline-flex items-center gap-2 px-10 py-4
+        class="inline-flex items-center gap-2 px-3 md:px-10 py-2 md:py-4
                bg-[#b38b59] hover:bg-[#967347]
                text-black rounded-3xl text-sm font-semibold
                uppercase tracking-widest transition-all duration-500

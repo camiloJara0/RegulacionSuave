@@ -70,7 +70,7 @@
     <!-- CTA PRINCIPAL -->
     <div class="text-center pt-6">
       <a 
-        href="https://calendar.google.com/calendar/u/0/appointments/schedules/YOUR_ID_AQUI"
+        href="https://calendar.app.google/iS7tEVqBRk7ie9KT6"
         target="_blank"
         class="inline-flex items-center gap-3 px-10 py-4
                bg-[#2f5e4f] hover:bg-[#244a3e]

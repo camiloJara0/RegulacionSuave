@@ -1,23 +1,25 @@
 <script setup>
 const precios = [
     {
-        tipo: "Sesión inicial",
+        tipo: "Sesión Integral Método SER",
         duracion: "60 min",
         precio: "$130.000",
         destacado: true,
-        nota: "Primer encuentro de orientación y regulación",
+        nota: "Encuentro inicial de regulación profunda mente + cuerpo + campo energético",
     },
     {
-        tipo: "Seguimiento",
+        tipo: "Acompañamiento Profundo",
         duracion: "60 min",
         precio: "$130.000",
         destacado: false,
+        nota: "Proceso terapéutico sostenido para transformación real y regulación nerviosa",
     },
     {
-        tipo: "Seguimiento",
+        tipo: "Regulación Nerviosa Somática",
         duracion: "30 min",
         precio: "$80.000",
         destacado: false,
+        nota: "Liberación corporal de memorias del sistema nervioso y ajuste emocional",
     },
 ];
 </script>
