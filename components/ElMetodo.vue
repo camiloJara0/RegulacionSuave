@@ -23,7 +23,7 @@ const ejes = [
     footer: "No se busca catarsis ni revivir experiencias.",
   },
   {
-    icon: "fa-sparkles",
+    icon: "fa-diamond",
     title: "Integración y autonomía",
     description: "El objetivo no es dependencia, sino que la persona:",
     items: [
