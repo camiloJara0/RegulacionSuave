@@ -8,7 +8,6 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
 <template>
   <section
-    id="contacto"
     class="relative pb-28 px-6 rounded-b-[60px] z-20
            bg-gradient-to-b from-[#0b0b0b] to-[#141414]"
     role="region"

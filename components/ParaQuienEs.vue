@@ -16,7 +16,7 @@ const items2 = [
 </script>
 
 <template>
-<section class="py-20 px-6 bg-[#faf8f5] transition-colors">
+<section id="para-quien" class="py-20 px-6 bg-[#faf8f5] transition-colors">
   <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-14">
 
     <!-- PARA QUIÉN ES -->
