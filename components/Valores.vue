@@ -16,8 +16,8 @@ const precios = [
     },
     {
         tipo: "Regulación Nerviosa Somática",
-        duracion: "30 min",
-        precio: "$80.000",
+        duracion: "60 min",
+        precio: "$150.000",
         destacado: false,
         nota: "Liberación corporal de memorias del sistema nervioso y ajuste emocional",
     },
@@ -29,23 +29,27 @@ const precios = [
     id="contacto"
         class="relative py-24 px-6
                bg-gradient-to-b from-[#141414] via-[#101010] to-[#0b0b0b]"
+        aria-labelledby="valores-title"
     >
         <div class="max-w-5xl mx-auto space-y-16">
 
             <!-- Encabezado -->
-            <div class="text-center space-y-4">
-                <h2 class="text-4xl font-light text-[#c5a47e] tracking-wide">
+            <header class="text-center space-y-4">
+                <h2 
+                  id="valores-title"
+                  class="text-4xl font-light text-[#c5a47e] tracking-wide"
+                >
                     Valores
                 </h2>
                 <p class="text-gray-400 max-w-xl mx-auto">
                     Un acompañamiento profesional, claro y sin compromisos a largo plazo
                 </p>
-            </div>
+            </header>
 
             <!-- Tarjetas -->
-            <div class="grid md:grid-cols-3 gap-8">
+            <div class="grid md:grid-cols-3 gap-8" role="list" aria-label="Paquetes de sesiones disponibles">
 
-                <div
+                <article
                     v-for="(item, index) in precios"
                     :key="index"
                     :class="[
@@ -54,6 +58,8 @@ const precios = [
                           ? 'bg-[#1b1b1b] border border-[#c5a47e]/40 shadow-[0_0_60px_rgba(197,164,126,0.15)] scale-[1.03]'
                           : 'bg-[#121212] border border-white/5'
                     ]"
+                    role="listitem"
+                    :aria-label="`${item.tipo}: ${item.precio} - ${item.nota}`"
                 >
                     <!-- Badge destacado -->
                     <div
@@ -61,14 +67,16 @@ const precios = [
                         class="absolute -top-3 left-1/2 -translate-x-1/2
                                px-4 py-1 rounded-full text-xs tracking-wide
                                bg-[#c5a47e] text-[#121212]"
+                        role="img"
+                        aria-label="Sesión recomendada"
                     >
                         Recomendada
                     </div>
 
                     <div class="space-y-2">
-                        <p class="text-sm uppercase tracking-widest text-gray-400">
+                        <h3 class="text-sm uppercase tracking-widest text-gray-400">
                             {{ item.tipo }}
-                        </p>
+                        </h3>
                         <p class="text-gray-300">
                             {{ item.duracion }}
                         </p>
@@ -89,13 +97,15 @@ const precios = [
                     >
                         {{ item.nota }}
                     </p>
-                </div>
+                </article>
             </div>
 
             <!-- Nota inferior -->
             <div
                 class="max-w-3xl mx-auto rounded-3xl px-8 py-8 text-center
                        bg-[#0f0f0f] border border-white/5"
+                role="region"
+                aria-label="Información adicional sobre sesiones"
             >
                 <p class="text-gray-300 leading-relaxed">
                     <span class="text-[#c5a47e] font-medium">

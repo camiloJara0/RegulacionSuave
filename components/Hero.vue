@@ -4,12 +4,16 @@
          bg-[#faf8f5]
          bg-[radial-gradient(circle_at_center,_#2c2c2c_0%,_#0a0a0a_100%)]
          overflow-hidden"
+  role="region"
+  aria-label="Sección de bienvenida principal"
 >
 
   <!-- Textura sutil -->
   <div
     class="absolute inset-0 opacity-[0.03] pointer-events-none"
     style="background-image: url('/arena.jpg');"
+    aria-hidden="true"
+    role="presentation"
   >
   </div>
 
@@ -31,30 +35,32 @@
       integrando cuerpo y sistema nervioso desde un enfoque suave y seguro.
     </p>
 
-    <div class="flex flex-wrap justify-center gap-3 pt-4 text-xs text-gray-400">
-      <span class="badge">Vives en alerta constante</span>
-      <span class="badge">Tu cuerpo reacciona aunque tu mente entienda</span>
-      <span class="badge">Te cuesta relajarte sin culpa</span>
+    <div class="flex flex-wrap justify-center gap-3 pt-4 text-xs text-gray-400" role="list" aria-label="Características principales">
+      <span class="badge" role="listitem">Vives en alerta constante</span>
+      <span class="badge" role="listitem">Tu cuerpo reacciona aunque tu mente entienda</span>
+      <span class="badge" role="listitem">Te cuesta relajarte sin culpa</span>
     </div>
 
-    <div class="pt-10 flex justify-center gap-3">
+    <div class="pt-10 flex md:flex-row flex-col justify-center gap-3" role="group" aria-label="Llamadas a acción principales">
       <a
         href="#metodo"
-        class="inline-flex items-center gap-2 px-3 md:px-10 py-2 md:py-4
+        class="md:inline-flex items-center gap-2 px-3 md:px-10 py-2 md:py-4
                border-2 border-[#b38b59] hover:bg-[#967347]
                text-white rounded-3xl text-sm font-semibold
                uppercase tracking-widest transition-all duration-500
-               hover:shadow-[0_0_20px_rgba(179,139,89,0.3)]"
+               hover:shadow-[0_0_20px_rgba(179,139,89,0.3)] text-center"
+        aria-label="Ir a la sección del método SER"
       >
         Conoce método SER
       </a>
       <a
         href="#contacto"
-        class="inline-flex items-center gap-2 px-3 md:px-10 py-2 md:py-4
+        class="md:inline-flex items-center gap-2 px-3 md:px-10 py-2 md:py-4
                bg-[#b38b59] hover:bg-[#967347]
                text-black rounded-3xl text-sm font-semibold
                uppercase tracking-widest transition-all duration-500
                hover:shadow-[0_0_20px_rgba(179,139,89,0.3)]"
+        aria-label="Ir a la sección de contacto para agendar tu sesión"
       >
         Agenda tu sesión
       </a>
@@ -66,10 +72,11 @@
     <div class="w-px h-16 bg-gradient-to-b from-transparent via-[#c5a47e]/50 to-transparent"></div>
   </div>
 
-  <!-- 🔥 DEGRADADO DE SALIDA -->
+  <!-- Degradado de salida -->
   <div
     class="pointer-events-none absolute bottom-0 left-0 w-full h-40
            bg-gradient-to-b from-transparent to-[#121212]"
+    aria-hidden="true"
   ></div>
 
 </section>

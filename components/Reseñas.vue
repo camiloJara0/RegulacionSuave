@@ -2,18 +2,23 @@
 function toggleText(button) {
     const moreText = button.parentElement.querySelector('.more-text');
     moreText.classList.toggle('hidden');
-    button.textContent = moreText.classList.contains('hidden') ? 'Leer más' : 'Leer menos';
+    const isExpanded = !moreText.classList.contains('hidden');
+    button.setAttribute('aria-expanded', isExpanded);
+    button.textContent = isExpanded ? 'Leer menos' : 'Leer más';
 }
 </script>
 
 <template>
-    <section class="relative bg-gradient-to-b from-[#0b0b0b] via-[#121212] to-[#0b0b0b] pt-6 pb-24 px-6 overflow-hidden">
+    <section class="relative bg-gradient-to-b from-[#0b0b0b] via-[#121212] to-[#0b0b0b] pt-6 pb-24 px-6 overflow-hidden" aria-labelledby="testimonios-title">
 
         <div class="max-w-6xl mx-auto space-y-20">
 
             <!-- ENCABEZADO -->
-            <div class="text-center space-y-4">
-                <h2 class="text-3xl md:text-4xl font-light text-[#c5a47e] tracking-wide">
+            <header class="text-center space-y-4">
+                <h2 
+                  id="testimonios-title"
+                  class="text-3xl md:text-4xl font-light text-[#c5a47e] tracking-wide"
+                >
                     Experiencias de acompañamiento
                 </h2>
 
@@ -21,10 +26,10 @@ function toggleText(button) {
                     Procesos reales vividos desde la regulación,
                     el respeto y la profundidad terapéutica.
                 </p>
-            </div>
+            </header>
 
             <!-- GRID TESTIMONIOS (Solo 3) -->
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10" role="list" aria-label="Testimonios de clientes">
 
                 <!-- TARJETA -->
                 <div

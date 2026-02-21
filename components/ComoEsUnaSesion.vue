@@ -21,34 +21,36 @@ const caracteristicas = [
     <div class="max-w-3xl mx-auto space-y-16">
 
       <!-- ENCABEZADO -->
-      <div class="text-center space-y-4">
+      <header class="text-center space-y-4">
         <h2 class="text-4xl font-light text-[#8c6b3f] dark:text-[#c5a47e]">
           Cómo es una sesión
         </h2>
         <p class="text-lg text-gray-600 dark:text-gray-400">
           Sesión individual de 60 minutos
         </p>
-      </div>
+      </header>
 
       <!-- TARJETAS PRINCIPALES -->
       <div class="grid md:grid-cols-2 gap-8">
 
         <!-- ESTRUCTURA -->
-        <div
+        <article
           class="rounded-3xl p-8 space-y-6
                  bg-[#f5f3ef] dark:bg-[#1a1a1a]/70
                  border border-black/5 dark:border-white/5
                  backdrop-blur-sm"
+          aria-labelledby="estructura-title"
         >
-          <h4 class="text-lg font-medium text-gray-800 dark:text-gray-200">
+          <h3 id="estructura-title" class="text-lg font-medium text-gray-800 dark:text-gray-200">
             Estructura
-          </h4>
+          </h3>
 
-          <ol class="space-y-4">
+          <ol class="space-y-4" role="list">
             <li
               v-for="(paso, index) in pasos"
               :key="index"
               class="flex items-start gap-4"
+              role="listitem"
             >
               <span
                 class="flex-shrink-0 w-8 h-8 rounded-full
@@ -56,6 +58,7 @@ const caracteristicas = [
                        flex items-center justify-center
                        text-sm font-serif
                        text-[#8c6b3f] dark:text-[#c5a47e]"
+                aria-hidden="true"
               >
                 {{ index + 1 }}
               </span>
@@ -64,35 +67,38 @@ const caracteristicas = [
               </span>
             </li>
           </ol>
-        </div>
+        </article>
 
         <!-- MODALIDAD -->
-        <div
+        <article
           class="rounded-3xl p-8 space-y-6
                  bg-[#f5f3ef] dark:bg-[#1a1a1a]/70
                  border border-black/5 dark:border-white/5
                  backdrop-blur-sm"
+          aria-labelledby="modalidad-title"
         >
-          <h4 class="text-lg font-medium text-gray-800 dark:text-gray-200">
+          <h3 id="modalidad-title" class="text-lg font-medium text-gray-800 dark:text-gray-200">
             Modalidad
-          </h4>
+          </h3>
 
-          <ul class="space-y-4">
+          <ul class="space-y-4" role="list">
             <li
               v-for="(item, index) in caracteristicas"
               :key="index"
               class="flex items-center gap-4"
+              role="listitem"
             >
               <i
                 :class="['fa-solid', item.icon]"
                 class="text-[#8c6b3f] dark:text-[#c5a47e]"
+                aria-hidden="true"
               ></i>
               <span class="text-gray-700 dark:text-gray-300">
                 {{ item.text }}
               </span>
             </li>
           </ul>
-        </div>
+        </article>
       </div>
 
       <!-- DIVISOR -->
