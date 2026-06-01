@@ -1,5 +1,11 @@
+<script setup>
+import { useScrollReveal } from '~/composables/useScrollReveal';
+
+const { element, isVisible } = useScrollReveal();
+</script>
+
 <template>
-  <section id="sobre-mi" class="py-24 px-6 bg-[#faf8f5] transition-colors">
+  <section ref="element" id="sobre-mi" :class="['py-24 px-6 bg-[#faf8f5] transition-colors scroll-reveal', { active: isVisible }]">
     <div class="max-w-5xl mx-auto">
 
       <div class="grid md:grid-cols-2 gap-16 items-center">
@@ -7,17 +13,17 @@
         <!-- CONTENIDO -->
         <header class="space-y-8">
 
-          <h2 class="text-4xl font-light text-[#8c6b3f] dark:text-[#c5a47e]">
+          <h2 class="text-4xl font-semibold text-[#8c6b3f] lighttext-[#616C4B]">
             Sobre mí
           </h2>
 
-          <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          <p class="text-gray-700 lighttext-gray-300 leading-relaxed">
             Trabajo desde una integración real del sistema completo.
             No solo con la mente.
           </p>
 
           <!-- BLOQUE INTEGRACIÓN -->
-          <div class="space-y-4 text-gray-600 dark:text-gray-400">
+          <div class="space-y-4 text-gray-600 lighttext-gray-400">
 
             <div class="flex items-start gap-3" role="listitem">
               <i class="fa-solid fa-brain text-[#8c6b3f] mt-1" aria-hidden="true"></i>
@@ -42,14 +48,14 @@
           </div>
 
           <!-- EXPERIENCIA REAL -->
-          <div class="pt-6 border-t border-black/5 dark:border-white/5">
-            <p class="text-gray-700 dark:text-gray-300 leading-relaxed">
+          <div class="pt-6 border-t border-black/5 lightborder-white/5">
+            <p class="text-gray-700 lighttext-gray-300 leading-relaxed">
               No solo estudié regulación.
               La atravesé. La integré.
               Hoy la enseño y acompaño.
             </p>
 
-            <p class="text-gray-600 dark:text-gray-400 mt-4">
+            <p class="text-gray-600 lighttext-gray-400 mt-4">
               Especializada en ansiedad, trauma, alta sensibilidad
               y desregulación nerviosa.
             </p>
@@ -82,6 +88,13 @@
 
       </div>
 
+      <div class="flex items-center justify-center border-t border-gray-200 mt-2">
+        <div class="text-gray-600 text-sm">
+          <p>Formación en Quiromasaje avalada por Eslaciencias</p>
+          <p>Resolución 1373 de 2023 - Secretaría de educación de Duitama, Boyacá.</p>
+        </div>
+        <img src="/eslaciencias.png" alt="Logo de Eslaciencias" class="w-[25%] object-cover">
+      </div>
     </div>
   </section>
 </template>

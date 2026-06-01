@@ -67,11 +67,11 @@ export default withMT({
         sage: {
           DEFAULT: "hsl(var(--sage))",
           light: "hsl(var(--sage-light))",
-          dark: "hsl(var(--sage-dark))",
+          light "hsl(var(--sage-dark))",
         },
         cream: {
           DEFAULT: "hsl(var(--cream))",
-          dark: "hsl(var(--cream-dark))",
+          light "hsl(var(--cream-dark))",
         },
         earth: {
           DEFAULT: "hsl(var(--earth))",

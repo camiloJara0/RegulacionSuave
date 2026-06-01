@@ -1,4 +1,8 @@
 <script setup>
+import { useScrollReveal } from '~/composables/useScrollReveal';
+
+const { element, isVisible } = useScrollReveal();
+
 function toggleText(button) {
     const moreText = button.parentElement.querySelector('.more-text');
     moreText.classList.toggle('hidden');
@@ -9,7 +13,7 @@ function toggleText(button) {
 </script>
 
 <template>
-    <section class="relative bg-gradient-to-b from-[#0b0b0b] via-[#121212] to-[#0b0b0b] pt-6 pb-24 px-6 overflow-hidden" aria-labelledby="testimonios-title">
+    <section ref="element" id="resenas" :class="['relative bg-gradient-to-b from-[#0b0b0b] via-[#121212] to-[#0b0b0b] pt-6 pb-24 px-6 overflow-hidden scroll-reveal', { active: isVisible }]" aria-labelledby="testimonios-title">
 
         <div class="max-w-6xl mx-auto space-y-20">
 
@@ -17,7 +21,7 @@ function toggleText(button) {
             <header class="text-center space-y-4">
                 <h2 
                   id="testimonios-title"
-                  class="text-3xl md:text-4xl font-light text-[#c5a47e] tracking-wide"
+                  class="text-3xl md:text-4xl font-semibold text-[#616C4B] tracking-wide"
                 >
                     Experiencias de acompañamiento
                 </h2>
@@ -33,10 +37,10 @@ function toggleText(button) {
 
                 <!-- TARJETA -->
                 <div
-                    class="group relative bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-[#c5a47e]/40">
+                    class="group relative bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-[#616C4B]/40">
 
                     <!-- Comilla decorativa -->
-                    <span class="absolute top-6 left-2 text-6xl text-[#c5a47e]/20 font-serif">“</span>
+                    <span class="absolute top-6 left-2 text-6xl text-[#616C4B]/20 font-serif">“</span>
 
                     <div class="relative space-y-5">
 
@@ -50,21 +54,21 @@ function toggleText(button) {
                         </p>
 
                         <button @click="toggleText($event.target)"
-                            class="text-[#c5a47e] text-xs tracking-wide uppercase hover:text-[#e0c2a0] transition">
+                            class="text-[#616C4B] text-xs tracking-wide uppercase hover:text-[#e0c2a0] transition">
                             Leer más
                         </button>
 
                         <p class="text-white/30 text-xs tracking-widest uppercase pt-4 border-t border-white/10">
-                            Ansiedad y sobrealerta
+                            Ansiedad y sobrealerta - Laura <i class="fa-solid fa-circle-user"></i>
                         </p>
                     </div>
                 </div>
 
                 <!-- TARJETA -->
                 <div
-                    class="group relative bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-[#c5a47e]/40">
+                    class="group relative bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-[#616C4B]/40">
 
-                    <span class="absolute top-6 left-2 text-6xl text-[#c5a47e]/20 font-serif">“</span>
+                    <span class="absolute top-6 left-2 text-6xl text-[#616C4B]/20 font-serif">“</span>
 
                     <div class="relative space-y-5">
                         <p class="text-white/80 leading-relaxed text-sm">
@@ -77,21 +81,21 @@ function toggleText(button) {
                         </p>
 
                         <button @click="toggleText($event.target)"
-                            class="text-[#c5a47e] text-xs tracking-wide uppercase hover:text-[#e0c2a0] transition">
+                            class="text-[#616C4B] text-xs tracking-wide uppercase hover:text-[#e0c2a0] transition">
                             Leer más
                         </button>
 
                         <p class="text-white/30 text-xs tracking-widest uppercase pt-4 border-t border-white/10">
-                            Alta sensibilidad
+                            Alta sensibilidad - Deifari Jaramillo <i class="fa-solid fa-circle-user"></i>
                         </p>
                     </div>
                 </div>
 
                 <!-- TARJETA -->
                 <div
-                    class="group relative bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-[#c5a47e]/40">
+                    class="group relative bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm transition-all duration-500 hover:bg-white/10 hover:border-[#616C4B]/40">
 
-                    <span class="absolute top-6 left-2 text-6xl text-[#c5a47e]/20 font-serif">“</span>
+                    <span class="absolute top-6 left-2 text-6xl text-[#616C4B]/20 font-serif">“</span>
 
                     <div class="relative space-y-5">
                         <p class="text-white/80 leading-relaxed text-sm">
@@ -103,12 +107,12 @@ function toggleText(button) {
                         </p>
 
                         <button @click="toggleText($event.target)"
-                            class="text-[#c5a47e] text-xs tracking-wide uppercase hover:text-[#e0c2a0] transition">
+                            class="text-[#616C4B] text-xs tracking-wide uppercase hover:text-[#e0c2a0] transition">
                             Leer más
                         </button>
 
                         <p class="text-white/30 text-xs tracking-widest uppercase pt-4 border-t border-white/10">
-                            Crisis de ansiedad
+                            Crisis de ansiedad - Luz Maria <i class="fa-solid fa-circle-user"></i>
                         </p>
                     </div>
                 </div>

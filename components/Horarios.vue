@@ -1,7 +1,14 @@
+<script setup>
+import { useScrollReveal } from '~/composables/useScrollReveal';
+
+const { element, isVisible } = useScrollReveal();
+</script>
+
 <template>
 <section 
+  ref="element"
   id="horarios" 
-  class="relative py-24 px-6 bg-gradient-to-b from-[#f4f8f5] to-[#e8f1ec] overflow-hidden"
+  :class="['relative py-24 px-6 bg-gradient-to-b from-[#f4f8f5] to-[#e8f1ec] overflow-hidden scroll-reveal', { active: isVisible }]"
   aria-labelledby="horarios-title"
 >
 
@@ -11,7 +18,7 @@
     <header class="text-center space-y-5">
       <h2 
         id="horarios-title"
-        class="text-3xl md:text-4xl font-light text-[#1f3d34] tracking-wide"
+        class="text-3xl md:text-4xl font-semibold text-[#1f3d34] tracking-wide"
       >
         Agenda tu espacio
       </h2>
@@ -91,21 +98,21 @@
     </aside>
 
     <!-- CTA PRINCIPAL -->
-    <div class="text-center pt-6">
+    <div class="text-center">
       <a 
         href="https://calendar.app.google/daqjZPEpZ1vEqQgU9"
         target="_blank"
         rel="noopener noreferrer"
-        class="inline-flex items-center gap-3 px-10 py-4
-               bg-[#2f5e4f] hover:bg-[#244a3e] focus:outline-none focus:ring-2 focus:ring-[#2f5e4f] focus:ring-offset-2
-               text-white rounded-full
+        class="inline-flex items-center px-6 py-4
+               bg-[#616C4B] hover:bg-[#244a3e] focus:outline-none focus:ring-2 focus:ring-[#2f5e4f] focus:ring-offset-2
+               text-white rounded-xl
                text-sm tracking-wide
                transition-all duration-300
                shadow-md hover:shadow-lg"
         aria-label="Agendar sesión ahora en Google Calendar - se abre en nueva ventana"
         title="Agendar tu sesión"
       >
-        Agendar sesión ahora
+        <i class="fa-solid fa-calendar mr-1"></i>Agendar sesión ahora
       </a>
 
       <p class="mt-4 text-sm text-[#6b8f82]">

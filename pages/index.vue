@@ -8,6 +8,7 @@ import ComoEsUnaSesion from '~/components/ComoEsUnaSesion.vue';
 import Valores from '~/components/Valores.vue';
 import Horarios from '~/components/Horarios.vue';
 import SobreMi from '~/components/SobreMi.vue';
+import Reseñas from '~/components/Reseñas.vue';
 import Contacto from '~/components/Contacto.vue';
 import AvisoLegal from '~/components/AvisoLegal.vue';
 </script>
@@ -17,8 +18,8 @@ import AvisoLegal from '~/components/AvisoLegal.vue';
       <Navigation />
       <main>
         <Hero />
-        <ParaQuienEs />
         <ElMetodo />
+        <ParaQuienEs />
         <ComoEsUnaSesion />
         <Horarios />
         <SobreMi />
@@ -26,6 +27,7 @@ import AvisoLegal from '~/components/AvisoLegal.vue';
         <Reseñas />
         <Contacto />
       </main>
-      <AvisoLegal />
+      <!-- <AvisoLegal /> -->
+      <Footer/>
     </div>
 </template>

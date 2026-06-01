@@ -1,4 +1,8 @@
 <script setup>
+import { useScrollReveal } from '~/composables/useScrollReveal';
+
+const { element, isVisible } = useScrollReveal();
+
 const whatsappNumber = "573508738787";
 const whatsappMessage = encodeURIComponent(
   "Hola, me gustaría más información sobre el acompañamiento para ansiedad y vértigo."
@@ -8,8 +12,9 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
 <template>
   <section
-    class="relative pb-28 px-6 rounded-b-[60px] z-20
-           bg-gradient-to-b from-[#0b0b0b] to-[#141414]"
+    ref="element"
+    id="contacto"
+    :class="['relative pb-28 px-6 rounded-b-[60px] z-20 bg-gradient-to-b from-[#0b0b0b] to-[#141414] scroll-reveal', { active: isVisible }]"
     role="region"
     aria-label="Sección de contacto"
   >
@@ -17,7 +22,7 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
       <!-- ENCABEZADO -->
       <header class="space-y-6">
-        <h2 class="text-4xl font-light text-[#c5a47e]">
+        <h2 class="text-4xl font-semibold text-[#616C4B]">
           Contacto
         </h2>
 
@@ -38,11 +43,11 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
           rel="noopener noreferrer"
           class="group inline-flex items-center gap-4
                  px-10 py-5 rounded-full
-                 bg-[#c5a47e] text-[#121212]
+                 bg-[#616C4B] text-[#121212]
                  text-lg font-medium
                  transition-all duration-500
                  hover:bg-[#d6b892]
-                 hover:shadow-[0_0_40px_rgba(197,164,126,0.45)] focus:outline-none focus:ring-2 focus:ring-[#c5a47e] focus:ring-offset-2 focus:ring-offset-[#0b0b0b]"
+                 hover:shadow-[0_0_40px_rgba(197,164,126,0.45)] focus:outline-none focus:ring-2 focus:ring-[#616C4B] focus:ring-offset-2 focus:ring-offset-[#0b0b0b]"
           aria-label="Escribir por WhatsApp - Abre una nueva ventana"
           title="Contacta conmigo por WhatsApp"
         >
@@ -55,7 +60,7 @@ const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
         <div role="region" aria-label="Número de contacto">
           <p class="text-gray-300">
-            <span class="font-medium text-[#c5a47e]">
+            <span class="font-medium text-[#616C4B]">
               +57 350 873 8787
             </span>
           </p>
