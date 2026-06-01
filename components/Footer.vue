@@ -6,9 +6,9 @@ const enlaces = [
         titulo: 'Contacto',
         links: [
             { label: '+57 350 873 8787', href: '' },
-            { label: 'Bogota, suba', href: '' },
-            { label: 'Calle 51C #107-10', href: '' },
-            { label: 'Ak 15 #104-76', href: '' },
+            { label: 'Bogota DC', href: '' },
+            { label: 'Sede Suba: Calle 151C #107-10', href: '' },
+            { label: 'Sede Norte: Ak 15 #104-76', href: '' },
         ]
     },
     {
@@ -97,7 +97,7 @@ const contacto = [
         <div class="border-t border-gray-200 bg-gray-100/50 backdrop-blur">
             <UContainer class="py-8 flex flex-col md:flex-row justify-between items-center gap-4">
                 <p class="text-sm text-gray-500">
-                    &copy; {{ year }} <span class="font-semibold text-white">SYS S.A.S.</span> Todos los derechos
+                    &copy; {{ year }} <span class="font-semibold text-black">Ansiedad NO Mas</span> Todos los derechos
                     reservados.
                 </p>
 

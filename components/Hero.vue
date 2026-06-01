@@ -18,7 +18,7 @@
     <div class="grid grid-cols-1 lg:grid-cols-[1fr_0.7fr] gap-8 lg:gap-12 items-center">
       
       <!-- CONTENIDO TEXTO - IZQUIERDA -->
-      <div class="space-y-6 sm:space-y-8 animate-fade-in order-2 lg:order-1 absolute lg:relative px-4 lg:px-1">
+      <div class="space-y-6 sm:space-y-8 animate-fade-in order-2 lg:order-1 absolute lg:top-0 top-50 bottom-0 lg:relative px-4 lg:px-1">
 
         <!-- Título principal -->
         <div>
