@@ -1,3 +1,7 @@
+<script setup>
+const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+</script>
 <template>
 <section
   class="relative min-h-screen flex items-center overflow-hidden bg-gray-900"
@@ -42,7 +46,7 @@
         <!-- Botones de llamada a acción -->
         <div class="flex flex-col sm:flex-row gap-4 pt-6">
           <a
-            href="#metodo"
+            href="https://calendar.app.google/daqjZPEpZ1vEqQgU9"
             class="px-6 sm:px-8 py-3 sm:py-4 bg-[#616C4B] hover:bg-[#525a41] 
                    text-white rounded-xl font-semibold transition-all duration-300
                    hover:shadow-lg hover:shadow-[#616C4B]/20 text-center
@@ -52,7 +56,7 @@
             <i class="fa-solid fa-calendar mr-1"></i>Agenda tu sesión
           </a>
           <a
-            href="#contacto"
+            :href="whatsappLink"
             class="px-6 sm:px-8 py-3 sm:py-4 border-2 border-[#616C4B] hover:bg-[#616C4B]/5
                    text-[#616C4B] rounded-xl font-semibold transition-all duration-300
                    hover:shadow-lg hover:shadow-[#616C4B]/10 text-center"
