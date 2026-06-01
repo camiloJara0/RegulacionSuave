@@ -1,4 +1,8 @@
 <script setup>
+const whatsappNumber = "573508738787";
+const whatsappMessage = encodeURIComponent(
+  "Hola, me gustaría más información sobre el acompañamiento para ansiedad y vértigo."
+);
 const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
 
 </script>
